@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arpita Chawla | Portfolio</title>
+
+<style>
+
+/* ---------- GLOBAL ---------- */
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family: "Segoe UI", Arial, sans-serif;
+color:white;
+overflow-x:hidden;
+
+/* Animated gradient background */
+background: linear-gradient(-45deg,#ff6ec4,#7873f5,#42e695,#ff9a9e);
+background-size:400% 400%;
+animation: gradientBG 15s ease infinite;
+}
+
+/* gradient animation */
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+width:85%;
+max-width:1100px;
+margin:auto;
+}
+
+/* ---------- HEADER ---------- */
+
+header{
+text-align:center;
+padding:90px 0 60px 0;
+}
+
+header h1{
+font-size:48px;
+letter-spacing:1px;
+}
+
+header p{
+margin-top:10px;
+font-size:18px;
+opacity:0.9;
+}
+
+/* ---------- NAV ---------- */
+
+nav{
+margin-top:20px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin:0 12px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ffd86b;
+}
+
+/* ---------- SECTIONS ---------- */
+
+section{
+padding:70px 0;
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+h2{
+font-size:30px;
+margin-bottom:25px;
+}
+
+/* ---------- GLASS CARD ---------- */
+
+.card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+border-radius:12px;
+padding:25px;
+margin-bottom:20px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* ---------- SKILLS ---------- */
+
+.skills span{
+display:inline-block;
+background:rgba(0,0,0,0.35);
+padding:8px 14px;
+border-radius:20px;
+margin:6px;
+font-size:14px;
+}
+
+/* ---------- LINKS ---------- */
+
+a{
+color:#fff176;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+text-align:center;
+padding:40px 0;
+opacity:0.8;
+}
+
+/* ---------- SMALL SCREEN ---------- */
+
+@media(max-width:768px){
+
+header h1{
+font-size:34px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<h1>Arpita Chawla</h1>
+
+<p>
+Computer Science Engineering student focused on C/C++, data structures, and algorithmic problem solving.
+</p>
+
+<nav>
+<a href="https://github.com/arpitachawla">GitHub</a>
+<a href="https://linkedin.com/in/arpitachawlaakaac">LinkedIn</a>
+</nav>
+
+</div>
+</header>
+
+<section>
+<div class="container">
+
+<h2>About</h2>
+
+<div class="card">
+I am a Computer Science Engineering student interested in building efficient software and exploring how systems work internally.
+My work includes building a memory allocator, a limit order matching engine, and implementing core data structures from scratch.
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Projects</h2>
+
+<div class="card">
+<h3>Limit Order Matching Engine (C)</h3>
+Simulation of a trading exchange order book implementing price-time priority matching.
+</div>
+
+<div class="card">
+<h3>Custom Memory Allocator</h3>
+Implementation of malloc, free, calloc, and realloc using a free-list allocation strategy.
+</div>
+
+<div class="card">
+<h3>Snake Game in C</h3>
+Terminal-based snake game with keyboard input and collision detection.
+</div>
+
+<div class="card">
+<h3>Data Structures Repository</h3>
+Implementations of stacks, queues, and linked lists using arrays and pointers.
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Technical Skills</h2>
+
+<div class="skills">
+<span>C</span>
+<span>C++</span>
+<span>Python</span>
+<span>Linux</span>
+<span>Arch Linux</span>
+<span>WSL</span>
+<span>Git</span>
+<span>Neovim</span>
+<span>GCC</span>
+<span>GDB</span>
+<span>Data Structures</span>
+<span>Algorithms</span>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Technical Writing</h2>
+
+<div class="card">
+Run C and C++ Programs in Windows in 5 Easy Steps
+</div>
+
+<div class="card">
+Understanding Windows PowerShell: A Practical Guide
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Contact</h2>
+
+<div class="card">
+
+<p>Email: arpitachawlaakaac@gmail.com</p>
+
+<p>
+GitHub:
+<a href="https://github.com/arpitachawla">github.com/arpitachawla</a>
+</p>
+
+<p>
+LinkedIn:
+<a href="https://linkedin.com/in/arpitachawlaakaac">
+linkedin.com/in/arpitachawlaakaac
+</a>
+</p>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Arpita Chawla
+</footer>
+
+<script>
+
+/* section fade-in animation */
+
+const sections=document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+const trigger=window.innerHeight*0.85;
+
+sections.forEach(section=>{
+const top=section.getBoundingClientRect().top;
+
+if(top<trigger){
+section.classList.add("show");
+}
+});
+
+});
+
+</script>
+
+</body>
+</html>
